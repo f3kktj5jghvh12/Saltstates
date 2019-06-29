@@ -15,3 +15,8 @@ configure_zabbix_agent:
   cmd.run:
     - name: x="hostname"
     - replace: sed -i "149s/.*/Hostname=$x/" zabbix_agentd.conf
+
+service_apache2:
+  service.running:
+    - name: zabbix-agent
+    - enable: True
