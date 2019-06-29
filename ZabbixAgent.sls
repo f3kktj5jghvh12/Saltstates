@@ -1,10 +1,12 @@
 download_zabbix_packages: 
   cmd.run:
-    - name: wget http://repo.zabbix.com/zabbix/3.4/ubuntu/pool/main/z/zabbix-release/zabbix-release_3.4-1%2Bbionic_all.deb -P /DL_files
+    - name: wget http://repo.zabbix.com/zabbix/3.4/ubuntu/pool/main/z/zabbix-release/zabbix-release_3.4-1+bionic_all.deb -P /DL_files
+    - package: dkpg -i zabbix-release_3.4-1+bionic_all.deb
 
 install_zabbix_packages:
   cmd.run:
-    - name: dpkg -i zabbix-release_3.4-1+bionic_all.deb
+    - name: apt-get update
+    - install: apt-get install zabbix-agent
 
 configure_zabbix_agent:
   file.managed:
