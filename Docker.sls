@@ -6,9 +6,13 @@ download_docker_packages:
 install_docker_packages:
   cmd.run:
     - name: sudo apt-get -y --assume-yes install docker-ce
-    - require:
-
+    
 service_Docker:
   service.running:
     - name: docker
     - enable: True
+
+Enable_Docker:
+  cmd.run:
+    - name: sudo systemctl unmask docker.service
+    - enable: systemctl enable docker

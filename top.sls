@@ -4,3 +4,4 @@ base:
     - PHP
     - ZabbixAgent
     - Docker
+    - Kubernetes
