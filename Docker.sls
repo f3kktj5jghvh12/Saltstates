@@ -14,5 +14,5 @@ service_Docker:
 
 Enable_Docker:
   cmd.run:
-    - name: sudo systemctl unmask docker.service
-    - enable: systemctl enable docker
+    - name: sudo systemctl enable docker
+    - unmask: sudo systemctl unmask docker.service
