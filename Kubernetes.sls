@@ -36,4 +36,4 @@ Swap:
 
 Kluster_join:
   cmd.run:
-    kubeadm join 10.2.3.16:6443 --token 1agpe0.9mmd556p2l23xic4 --discovery-token-ca-cert-hash sha256:595e936be7686f4b5f77d78e289771097df18c94462e46b6dd3e6cd51a672922
+    -name: kubeadm join 10.2.3.16:6443 --token 1agpe0.9mmd556p2l23xic4 --discovery-token-ca-cert-hash sha256:595e936be7686f4b5f77d78e289771097df18c94462e46b6dd3e6cd51a672922
