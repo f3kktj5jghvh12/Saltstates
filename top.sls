@@ -5,3 +5,4 @@ base:
     - ZabbixAgent
     - Docker
     - Kubernetes
+    - Wordpress
